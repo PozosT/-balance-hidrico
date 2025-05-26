@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Hídrico IWA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Balance Hídrico IWA - Sistema de Gestión de Información</h1>
+    </header>
+
+    <main>
+        <div class="balance-container">
+            <div id="balance-chart"></div>
+        </div>
+
+        <div id="component-details" class="hidden">
+            <h2 id="component-title"></h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="bases-datos">Bases de Datos</button>
+                <button class="tab-button" data-tab="metodologia">Metodología</button>
+                <button class="tab-button" data-tab="papers">Papers</button>
+                <button class="tab-button" data-tab="incertidumbre">Incertidumbre</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="bases-datos" class="tab-pane active">
+                    <h3>Bases de Datos</h3>
+                    <div class="file-list"></div>
+                    <div class="file-upload">
+                        <input type="file" id="bases-datos-upload" accept=".csv,.xlsx,.pdf,.docx">
+                        <button onclick="uploadFile('bases-datos')">Subir Archivo</button>
+                    </div>
+                </div>
+
+                <div id="metodologia" class="tab-pane">
+                    <h3>Metodología</h3>
+                    <div class="file-list"></div>
+                    <div class="file-upload">
+                        <input type="file" id="metodologia-upload" accept=".pdf,.docx">
+                        <button onclick="uploadFile('metodologia')">Subir Archivo</button>
+                    </div>
+                </div>
+
+                <div id="papers" class="tab-pane">
+                    <h3>Papers</h3>
+                    <div class="file-list"></div>
+                    <div class="file-upload">
+                        <input type="file" id="papers-upload" accept=".pdf">
+                        <button onclick="uploadFile('papers')">Subir Archivo</button>
+                    </div>
+                </div>
+
+                <div id="incertidumbre" class="tab-pane">
+                    <h3>Cálculo de Incertidumbre</h3>
+                    <div class="file-list"></div>
+                    <div class="file-upload">
+                        <input type="file" id="incertidumbre-upload" accept=".pdf,.xlsx">
+                        <button onclick="uploadFile('incertidumbre')">Subir Archivo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desarrollado con GitHub Pages | Balance Hídrico IWA</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
